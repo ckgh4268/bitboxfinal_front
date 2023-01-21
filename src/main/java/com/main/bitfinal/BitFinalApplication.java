@@ -17,6 +17,6 @@ public class BitFinalApplication {
     public static void main(String[] args) {
         SpringApplication.run(BitFinalApplication.class, args);
 
-    }
+    } 
 
 }
