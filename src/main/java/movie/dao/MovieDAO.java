@@ -18,7 +18,7 @@ public interface MovieDAO extends JpaRepository<MovieDTO, String>{
 	
 	@Query("select movieDTO from MovieDTO movieDTO where movieDTO.movie_already_released = '0' or movieDTO.movie_already_released  = '1' or movieDTO.movie_class = '1' or movieDTO.movie_class = '3' or movieDTO.movie_class = '4' or movieDTO.movie_class = '5' ORDER BY movieDTO.movie_reserve_rate DESC")
 	public List<MovieDTO> getMovieList_boxoffice();
-	
+	 
 	@Query("select movieDTO from MovieDTO movieDTO where movieDTO.movie_already_released = '0' ORDER BY movieDTO.movie_reserve_rate DESC")
 	public List<MovieDTO> getMovieList_already_on_boxoffice();
 	    
