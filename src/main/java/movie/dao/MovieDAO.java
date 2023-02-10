@@ -27,10 +27,10 @@ public interface MovieDAO extends JpaRepository<MovieDTO, String>{
 	    
 	@Query("select movieDTO from MovieDTO movieDTO where movieDTO.movie_already_released = '1' ORDER BY movieDTO.movie_reserve_rate DESC")
 	public List<MovieDTO> getMovieList_tobereleased();
-	  
+	   
 	@Query("select movieDTO from MovieDTO movieDTO where movieDTO.movie_title like '%' || :keyword || '%' AND movieDTO.movie_already_released = '1' ORDER BY movieDTO.movie_reserve_rate DESC")
 	public List<MovieDTO> getMovie_title_search_tobereleased(@Param("keyword")String keyword);
-	     
+	      
 	@Query("select movieDTO from MovieDTO movieDTO where movieDTO.movie_class = '3' ORDER BY movieDTO.movie_reserve_rate DESC")
 	public List<MovieDTO> getMovieList_special();
 	   
